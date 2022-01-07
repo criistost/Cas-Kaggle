@@ -28,5 +28,11 @@ Aquesta base de dades consta de 12 atributs:
   - *Oldpeak*: oldpeak = ST
   - *HeartDisease*: Malaltia cardíaca (1: malaltia cardíaca, 0: normal)
 
+### Objectiu
+
+Aquesta base de dades té com a objectiu veure quins són els factors que fan que un pacient pateixi una malaltia cardíaca o no. Per tant, volem entrenar un model que ens pugui predir amb bons resultats si un pacient tindrà una malaltia cardíaca (1: malaltia cardíaca, 0: normal) i així poder estudiar quins atributs tenen més pes a l'hora de desenvolupar-ne una.
+
+
+
 
 
