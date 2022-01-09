@@ -100,6 +100,7 @@ Resultats al executar els models:
 | Random Forest | 0.8478 | 112.152 |
 | XGBOOST | 0.8586 | 0.0563 |
 | Decission Tree | 0.8152 | 0.0058 |
+| KNN | 0.8478 | 0.00175 |
 
 
 
