@@ -72,18 +72,18 @@ Per els casos dels atributs en els que hem trobat oitliers, hem canviat els outl
 
 Finalment mirem les correlacions dels atributs amb el nostre target i les plotejem. Els resultats han estat els següents:
 
-ST_Slope         -0.558771
-MaxHR            -0.400421
-ChestPainType    -0.386828
-Cholesterol       0.042988
-RestingECG        0.057384
-RestingBP         0.117798
-FastingBS         0.267291
-Age               0.282039
-Sex               0.305445
-Oldpeak           0.403951
-ExerciseAngina    0.494282
-HeartDisease      1.000000
+  · ST_Slope         -0.558771
+  · MaxHR            -0.400421
+  · ChestPainType    -0.386828
+  · Cholesterol       0.042988
+  · RestingECG        0.057384
+  · RestingBP         0.117798
+  · FastingBS         0.267291
+  · Age               0.282039
+  · Sex               0.305445
+  · Oldpeak           0.403951
+  · ExerciseAngina    0.494282
+  · HeartDisease      1.000000
 
 Observem que l'atribut amb major correlació amb l'atribut 'HeartDisease' és el 'ST_Slope'. 
 
@@ -92,6 +92,14 @@ Observem que l'atribut amb major correlació amb l'atribut 'HeartDisease' és el
 Abans de realitzar els diferents models, dividim les dades en train i test, i estandaritzem les dades.
 
 Resultats al executar els models:
+
+| Model | Accuracy | Temps |
+| ------|----------|-------|
+| Regressor Logístic | 0.847 | 0.00804 |
+| SVC | 0.8695 | 0.03129 |
+| Random Forest | 0.8478 | 112.152 |
+| XGBOOST | 0.8586 | 0.0563 |
+| Decission Tree | 0.8152 | 0.0058 |
 
 
 
