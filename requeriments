@@ -1,1 +1,11 @@
-
+Llibreries:
+- numpy
+- pandas
+- matplotlib.pyplot
+- sklearn
+- seaborn 
+- xgboost 
+- plotly
+- time
+- dill
+- joblib
