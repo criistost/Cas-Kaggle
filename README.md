@@ -71,21 +71,43 @@ Seguidament analitzem els atributs numèrics, i observem:
 Per els casos dels atributs en els que hem trobat oitliers, hem canviat els outliers per el valor mitjà per tal d'eliminarlos.
 
 Finalment mirem les correlacions dels atributs amb el nostre target i les plotejem. Els resultats han estat els següents:
+  - ST_Slope         -0.558771
+  - MaxHR            -0.400421
+  - ChestPainType    -0.386828
+  - Cholesterol       0.042988
+  - RestingECG        0.057384
+  - RestingBP         0.117798
+  - FastingBS         0.267291
+  - Age               0.282039
+  - Sex               0.305445
+  - *Oldpeak           0.403951*
+  - *ExerciseAngina    0.494282*
+  - HeartDisease      1.000000
 
-  · ST_Slope         -0.558771
-  · MaxHR            -0.400421
-  · ChestPainType    -0.386828
-  · Cholesterol       0.042988
-  · RestingECG        0.057384
-  · RestingBP         0.117798
-  · FastingBS         0.267291
-  · Age               0.282039
-  · Sex               0.305445
-  · Oldpeak           0.403951
-  · ExerciseAngina    0.494282
-  · HeartDisease      1.000000
+Observem elsatribut amb major correlació amb l'atribut 'HeartDisease' són 'ExerciseAngina' i Oldpeak. Però com varios atributs tenen diferents tipus de resultats, creem nous atributs corresponents als posibles resultats dels atributs i mirem les noves correlacions. Els resultats han estat els següents:
 
-Observem que l'atribut amb major correlació amb l'atribut 'HeartDisease' és el 'ST_Slope'. 
+  - ST_Slope_2         -0.622164
+  - ExerciseAngina_0   -0.494282
+  - ChestPainType_1    -0.401924
+  - MaxHR              -0.400421
+  - Sex_0              -0.305445
+  - ChestPainType_2    -0.212964
+  - RestingECG_1       -0.091580
+  - ChestPainType_3    -0.054790
+  - RestingECG_0        0.010670
+  - Cholesterol         0.042988
+  - RestingECG_2        0.102527
+  - RestingBP           0.117798
+  - ST_Slope_0          0.122527
+  - FastingBS           0.267291
+  - Age                 0.282039
+  - Sex_1               0.305445
+  - Oldpeak             0.403951
+  - ExerciseAngina_1    0.494282
+  - ChestPainType_0     0.516716
+  - ST_Slope_1          0.554134
+
+Podem concloure que definitivament els atributs que tenen més correlació amb 'HeartDisease' són 'ST_Slope_1' (Flat),'ChestPainType_0'(asimptomàtic), 'ExerciseAngina_1' (Si), 'Oldpeak' i 'Sex_1' (home). Amb 0.55,0.51,0.49,0.4,0.3 respectivament.
 
 # Models
 
@@ -95,12 +117,20 @@ Resultats al executar els models:
 
 | Model | Accuracy | Temps |
 | ------|----------|-------|
-| Regressor Logístic | 0.847 | 0.00804 |
-| SVC | 0.8695 | 0.03129 |
-| Random Forest | 0.8478 | 112.152 |
-| XGBOOST | 0.8586 | 0.0563 |
-| Decission Tree | 0.8152 | 0.0058 |
-| KNN | 0.8478 | 0.00175 |
+| Regressor Logístic | 0.8478 | 0.01766 |
+| SVC | 0.8695 | 0.0312 |
+| Random Forest | 0.8804 | 13.4230 |
+| XGBOOST | 0.8804 | 0.1752 |
+| Decission Tree | 0.8260 | 0.0092 |
+| KNN | 0.8586 | 0.0013 |
+
+Comparant el temps, els accuracy i la ROC Curve i la Precision-Recall Curve, veiem que el model que millor ens funciona amb la nostre base de dades és el XGBOOST.
+
+# PCA
+
+L'últim experiment que he fet és provar de fer un PCA amb el model XGBoost per veure fins quan podríem reduir les dimensions de l'espai. En el resultat podem veure que l'accuracy del model va decreixent a poc a poc a mida que reduïm la dimensió. Però podem observar un canvi bastant dràstic a partir de quan la dimensió és de 8 cap avall.
+
+
 
 
 
