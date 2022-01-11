@@ -72,14 +72,14 @@ y = dades[-1]
 
 scaler_x = (x - mitjana)/desviacio_estandard
 
-x2 = [scaler_x]
-x3 = np.array(x2)
+x1 = [scaler_x]
+x2 = np.array(x1)
 
 prediccio = classificador.predict(x3)
 print(prediccio)
 
-y2 = [y]
-y3 = np.array(y2)
+y1 = [y]
+y2 = np.array(y1)
 
-joblib.dump(prediccio,'prediccio.pkl')
-joblib.dump(y3,'y_real.pkl')
+joblib.dump(prediccio,'pred.pkl')
+joblib.dump(y3,'ynova.pkl')
