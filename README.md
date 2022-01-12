@@ -131,6 +131,10 @@ Comparant el temps, els accuracy i la ROC Curve i la Precision-Recall Curve, vei
 L'últim experiment que he fet és provar de fer un PCA amb el model XGBoost per veure fins quan podríem reduir les dimensions de l'espai. En el resultat podem veure que l'accuracy del model va decreixent a poc a poc a mida que reduïm la dimensió. Però podem observar un canvi bastant dràstic a partir de quan la dimensió és de 8 cap avall.
 
 
+# Conclusions
+
+Hem vist que el model que millor prediu el nostre atribut objectiu és el XgBoost. 
+Observem que per intentar no patir una malaltía cardíaca s’hauria d’evitar tenir angina induïda per l'exercici on el dolor del pit fos asimptomàtic i que per tant el pendent de l’exercici màxim fos pla.
 
 
 
