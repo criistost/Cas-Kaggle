@@ -128,7 +128,7 @@ Comparant el temps, els accuracy i la ROC Curve i la Precision-Recall Curve, vei
 
 # PCA
 
-L'últim experiment que he fet és provar de fer un PCA amb el model XGBoost per veure fins quan podríem reduir les dimensions de l'espai. En el resultat podem veure que l'accuracy del model va decreixent a poc a poc a mida que reduïm la dimensió. Però podem observar un canvi bastant dràstic a partir de quan la dimensió és de 8 cap avall.
+L'últim experiment que he fet és provar de fer un PCA amb el model XGBoost per veure fins quan podríem reduir les dimensions de l'espai. En el resultat podem veure que l'accuracy del model va decreixent a poc a poc a mida que reduïm la dimensió. Però podem observar un canvi bastant dràstic a partir de quan la dimensió és de 14 cap avall.
 
 
 # Conclusions
